@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="700" maxWidth="700" minHeight="700" minWidth="700" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.bmiController">
+   <children>
+      <ImageView fitHeight="703.0" fitWidth="838.0" layoutX="-22.0" layoutY="-2.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.74" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Downloads/background-images-hd-light-color-1.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="63.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Height">
+         <font>
+            <Font name="Noteworthy Light" size="26.0" />
+         </font>
+      </Text>
+      <Text layoutX="63.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Weight">
+         <font>
+            <Font name="Noteworthy Light" size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="uheight" layoutX="300.0" layoutY="101.0" prefHeight="27.0" prefWidth="102.0" />
+      <TextField fx:id="uweight" layoutX="300.0" layoutY="146.0" prefHeight="27.0" prefWidth="102.0" />
+      <Button layoutX="114.0" layoutY="275.0" mnemonicParsing="false" onAction="#calculatebmi" text="calculate" />
+      <Text layoutX="161.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI APPLICATION">
+         <font>
+            <Font name="AppleMyungjo Regular" size="36.0" />
+         </font>
+      </Text>
+      <Label fx:id="l1" layoutX="63.0" layoutY="459.0" prefHeight="35.0" prefWidth="504.0" text="Your BMI will be displayed here" textFill="#2600ff" />
+      <Label fx:id="l2" layoutX="63.0" layoutY="504.0" prefHeight="35.0" prefWidth="504.0" text="Check here if you are underweight/overweight/weightnormal" textFill="#1b02f8" />
+      <Label layoutX="425.0" layoutY="106.0" text="in metres" />
+      <Label layoutX="425.0" layoutY="150.0" text="in kilogram" />
+      <Text layoutX="63.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Age">
+         <font>
+            <Font name="Noteworthy Light" size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="uage" layoutX="300.0" layoutY="187.0" prefHeight="27.0" prefWidth="102.0" />
+      <Text layoutX="432.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="61.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Gender">
+         <font>
+            <Font name="Noteworthy Light" size="26.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="umale" layoutX="301.0" layoutY="234.0" mnemonicParsing="false" selected="true" text="Man">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ufemale" layoutX="301.0" layoutY="256.0" mnemonicParsing="false" text="Woman" toggleGroup="$gender" />
+      <RadioButton fx:id="uboy" layoutX="301.0" layoutY="279.0" mnemonicParsing="false" text="Boy" toggleGroup="$gender" />
+      <RadioButton fx:id="ugirl" layoutX="301.0" layoutY="301.0" mnemonicParsing="false" text="Girl" toggleGroup="$gender" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>
